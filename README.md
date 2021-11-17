@@ -1,7 +1,7 @@
 # Brick Blaster Patch
 Patch for Brick Blaster (Media Pocket French Version) to fix some crashes on Windows 7+.
 
-<img src="img/BrickBlaster_logo.png" alt="Brick Blaster Logo">
+<img src="img/BrickBlasterPatch_logo.png" alt="Brick Blaster Patch Logo">
 
 ## History and motivation
 Brick Blaster (from Media Pocket) was a great part in my childhood and some years ago, I wanted to discover it again but each time I tried to launch the game on my former Windows 7 computer, it kept crashing and it doesn't work neither on Windows 10, even with the compatibility settings enabled and by using the [VDMSound Project](https://sourceforge.net/projects/vdmsound/).
@@ -24,7 +24,7 @@ But today, I came back to this project and I could finally find what was the cra
 - In the View tab, click on "Patch file..." and import the file "BrickBlaster_patch_ev.1337" (and/or "BrickBlaster_patch_io.1337").
 - The patches can now be saved to the "blaster.exe" file with the "Patch File" button.
 
-For more convinience, patched versions are already available in the "Releases" section:
+For more convinience, patched versions are already available in the [Releases](https://github.com/david4599/BrickBlaster-Patch/releases/latest) section:
 - "BrickBlaster_patch_ev.zip" for the environment variables issue (blaster.exe SHA256: A2E5ABCE58A7AF7E86E76AA43F87CD251BACF9FC6B76B52A9155C5D61167E9D3).
 - "BrickBlaster_patch_ev_io.zip" for the environment variables and I/O instructions issues (blaster.exe SHA256: C9FC62B55159B333135A0A28EF6387C2066300BD167AE2633E94BB6D1AB35737).
 

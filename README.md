@@ -1,5 +1,4 @@
 # Brick Blaster Patch
-Patch for Brick Blaster (Media Pocket French Version) to fix some crashes on Windows 7+.
 
 <img src="img/BrickBlasterPatch_logo.png" alt="Brick Blaster Patch Logo">
 

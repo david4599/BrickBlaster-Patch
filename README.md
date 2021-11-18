@@ -13,14 +13,14 @@ But today, I came back to this project and I could finally find what was the cra
 
 ## Patches list
 - BrickBlaster_patch_ev.1337: The first issue concerns the length of the environment variables. It seems that a limit of 2048 (0x800) characters is defined for the counting loop and the game exits if it doesn't find any null dword (end of the list) in that interval. On a fresh Windows install, this should not be a problem but when installing many programs, the environment variables list grows and the limit can be exceeded. The simple fix is to set an arbitrary higher number e.g. 32768 (0x8000).
-- BrickBlaster_patch_io.1337: Another issue is about some I/O instructions that throw a Privileged Instruction Exception (0xc0000096). <del>Delete them solve the issue and it appears to have no negative effects on it.</del> It seems setting the "Windows 95" compatibility mode solve this issue without removing these instructions but try this patch if the mode doesn't work.
+- BrickBlaster_patch_io.1337: Another issue is about some I/O instructions that throw a Privileged Instruction Exception (0xc0000096). Delete them solve the issue and it appears to have no negative effects on it. But it seems that setting the "Windows 95" compatibility mode solve this issue without removing these instructions but try this patch if the mode doesn't work.
 
 ## Patching the game
-/!\ Before doing any modifications, make sure to create a backup of the original "blaster.exe" file and check its SHA256 hash to avoid bad patches. It should be C0FC698A0C928127DB285138F3FDC4E2EDAFD9B6A053A92C0ECC44C5481ACF06 (French Version).
+/!\ Before doing any modifications, make sure to create a backup of the original "blaster.exe".
 
-- Download and install x64dbg debugger and launch x32dbg.
+- Download and install [x64dbg debugger](https://github.com/x64dbg/x64dbg/releases/latest) and launch x32dbg (Change the language to English in the options if you are French, the translation in the patches window is buggy currently).
 - Load the "blaster.exe" file inside the debugger.
-- In the View tab, click on "Patch file..." and import the file "BrickBlaster_patch_ev.1337" (and/or "BrickBlaster_patch_io.1337").
+- In the File tab, click on "Patch file..." and import the file "BrickBlaster_patch_ev.1337" (and/or "BrickBlaster_patch_io.1337").
 - The patches can now be saved to the "blaster.exe" file with the "Patch File" button.
 
 For more convinience, patched versions are already available in the [Releases](https://github.com/david4599/BrickBlaster-Patch/releases/latest) section:
@@ -32,7 +32,7 @@ When patching, the filename must remain the same i.e. "blaster.exe" otherwise th
 ## Notes
 - The patches are tested and working on Windows 10 64-bit and Windows 7 32-bit. Other modern Windows versions should work as well.
 - The patched game seems to crash inside a Windows 7+ Virtual Machine (VMware) probably due to a conflit with the generic VMware display driver.
-- Compatibility settings (256 colors and 640 x 480 screen resolution options) and VDMSound may be required in certain circumstances, try using them if the game doesn't work well.
+- Compatibility settings (256 colors and 640 x 480 screen resolution options) and VDMSound may be required in certain circumstances (e.g. color problems), try using them if the game doesn't work well.
 - The game was launched in 1999 and can't be found easily without having the original CD-ROM. I assume it can be considered as an abandonware today and can be distributed freely so I share it here though an [ISO file](https://www.dropbox.com/s/91b3xgbr1c1e86v/Brick%20Blaster.iso?dl=1).
 
 #

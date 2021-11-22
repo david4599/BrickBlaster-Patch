@@ -18,7 +18,7 @@ But today, I came back to this project and I could finally find what was the cra
 ## Patching the game
 /!\ Before doing any modifications, make sure to create a backup of the original "blaster.exe".
 
-- Download and install [x64dbg debugger](https://github.com/x64dbg/x64dbg/releases/latest) and launch x32dbg (Change the language to English in the options if you are French, the translation in the patches window is buggy currently).
+- Download and install [x64dbg debugger](https://github.com/x64dbg/x64dbg/releases/latest) and launch x32dbg (If you use an older version, you may need to update it or change the language to English if you are French, the patch files don't appear when browsing them in these versions).
 - Load the "blaster.exe" file inside the debugger.
 - In the File tab, click on "Patch file..." and import the file "BrickBlaster_patch_ev.1337" (and/or "BrickBlaster_patch_io.1337").
 - The patches can now be saved to the "blaster.exe" file with the "Patch File" button.

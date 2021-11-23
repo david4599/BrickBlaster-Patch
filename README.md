@@ -11,6 +11,9 @@ It worked but I was not fully satisfied because I either needed to restart my co
 
 But today, I came back to this project and I could finally find what was the crashing issues.
 
+Btw, I could extract the resources (images, musics, etc) from the game with some scripts and I also discovered hidden features and easter eggs.  
+All of these discoveries are now detailed on the [Brick Blaster Extract Tools](https://github.com/david4599/BrickBlaster-ExtractTools) repository.
+
 ## Patches list
 - BrickBlaster_patch_ev.1337: The first issue concerns the length of the environment variables. It seems that a limit of 2048 (0x800) characters is defined for the counting loop and the game exits if it doesn't find any null dword (end of the list) in that interval. On a fresh Windows install, this should not be a problem but when installing many programs, the environment variables list grows and the limit can be exceeded. The simple fix is to set an arbitrary higher number e.g. 32768 (0x8000).
 - BrickBlaster_patch_io.1337: Another issue is about some I/O instructions that throw a Privileged Instruction Exception (0xc0000096). Delete them solve the issue and it appears to have no negative effects on it. But it seems that setting the "Windows 95" compatibility mode solve this issue without removing these instructions but try this patch if the mode doesn't work.
